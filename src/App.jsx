@@ -1,18 +1,26 @@
-import {} from "react";
-
 import "./App.css";
 
+import AllCountry from "./Component/AllCountry";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Main from "./Component/Main";
+
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Main></Main>,
+      children: [
+        {
+          path: "/",
+          element: <AllCountry></AllCountry>,
+        },
+      ],
+    },
+  ]);
+
   return (
     <>
-      <div>
-        <h1
-          id="header"
-          className=" text-4xl text-center mt-16 font-bold"
-        >
-          Search Country for details
-        </h1>
-      </div>
+      <RouterProvider router={router}></RouterProvider>
     </>
   );
 }
