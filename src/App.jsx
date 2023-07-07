@@ -6,7 +6,12 @@ function App() {
   return (
     <>
       <div>
-        <h1>Search Country for details</h1>
+        <h1
+          id="header"
+          className=" text-4xl text-center mt-16 font-bold"
+        >
+          Search Country for details
+        </h1>
       </div>
     </>
   );
