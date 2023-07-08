@@ -4,10 +4,10 @@ import { useLoaderData } from "react-router-dom";
 
 const CountryDetail = () => {
   const details = useLoaderData();
-  console.log(details);
+  //   console.log(details);
   return (
     <div>
-      <p>country detaails </p>
+      <p>{details[0]?.name.common}</p>
     </div>
   );
 };

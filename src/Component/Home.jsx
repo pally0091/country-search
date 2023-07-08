@@ -10,10 +10,11 @@ const Home = () => {
       >
         Search Country for details
       </h1>
-      <div className="w-3/12 mt-5 mx-auto border-2 border-black rounded-lg p-1">
+      <div className="w-3/12 mt-5 mx-auto border-b-2 border-black rounded-lg p-1">
         <input
-          className="w-full mx-auto rounded-lg shadow-inner text-xl"
+          className="w-full mx-auto rounded-lg shadow-inner text-xl bg-transparent p-1 focus:shadow-sm focus:shadow-lime-200 text-center"
           type="search"
+          placeholder="Search"
         />
       </div>
     </div>

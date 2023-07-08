@@ -11,8 +11,11 @@ const Country = ({ country }) => {
       <p>Status : {status}</p>
       <p>Capital : {capital}</p>
       <p>Region : {region}</p>
-      <Link to={`/search/${name.common}`}>
-        <button className="bg-blue-300 p-2 rounded-lg hover:bg-blue-600 hover:shadow-md hover:shadow-slate-500">
+      <Link
+        className="mt-3"
+        to={`/search/${name.common}`}
+      >
+        <button className="bg-blue-300 mt-3 w-full p-2 rounded-lg hover:bg-blue-600 hover:shadow-md hover:shadow-slate-500">
           Details
         </button>
       </Link>
