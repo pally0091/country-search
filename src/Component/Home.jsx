@@ -10,6 +10,12 @@ const Home = () => {
       >
         Search Country for details
       </h1>
+      <div className="w-3/12 mt-5 mx-auto border-2 border-black rounded-lg p-1">
+        <input
+          className="w-full mx-auto rounded-lg shadow-inner text-xl"
+          type="search"
+        />
+      </div>
     </div>
   );
 };
