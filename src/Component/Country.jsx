@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Country = ({ country }) => {
   const { name, status, capital, region } = country;
   return (
-    <div className="border border-black rounded-lg p-2">
+    <div className="border border-black rounded-lg p-2 mt-3">
       <h3 className="text-lg font-bold">{name.common}</h3>
       <p>Status : {status}</p>
       <p>Capital : {capital}</p>
