@@ -54,7 +54,7 @@ const Home = () => {
           onSubmit={handleSubmit}
         >
           <input
-            className="bg-transparent  w-3/4"
+            className="bg-transparent  w-3/4 text-center"
             type="text"
             value={query}
             onChange={handleInputChange}
