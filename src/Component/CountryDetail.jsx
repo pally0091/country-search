@@ -7,7 +7,7 @@ const CountryDetail = () => {
   const details = useLoaderData();
   //   console.log(details);
   return (
-    <div className="w-9/12 mx-auto border border-white p-10">
+    <div className="w-9/12 mx-auto border border-white p-10 rounded-lg">
       <div className="flex flex-row items-center">
         <div className="w-3/4">
           <h3 className="text-2xl font-bold mt-2">
@@ -37,15 +37,19 @@ const CountryDetail = () => {
         <div className="w-1/4">
           <div>
             <img
+              className="shadow-md shadow-slate-700"
               src={details[0]?.flags.png}
               alt=""
             />
+            <p className="text-center mt1">National Flag</p>
           </div>
-          <div>
+          <div className="h-[240px]">
             <img
+              className="h-full w-full"
               src={details[0]?.coatOfArms.png}
               alt=""
             />
+            <p className="text-center mt1">Coat of Arms</p>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Country = ({ country }) => {
   const { name, status, capital, region } = country;
   return (
-    <div className="border border-black rounded-lg p-2 mt-3">
+    <div className="border border-black bg-sky-800 hover:bg-white text-white hover:text-black rounded-lg p-2 mt-3 hover:shadow-md hover:shadow-black transition-all duration-500">
       <h3 className="text-lg font-bold">{name.common}</h3>
       <p>Status : {status}</p>
       <p>Capital : {capital}</p>
@@ -15,7 +15,7 @@ const Country = ({ country }) => {
         className="mt-3"
         to={`/search/${name.common}`}
       >
-        <button className="bg-blue-300 mt-3 w-full p-2 rounded-lg hover:bg-blue-600 hover:shadow-md hover:shadow-slate-500">
+        <button className="bg-blue-300 mt-3 w-full p-2 rounded-lg hover:bg-blue-600 hover:shadow-md hover:shadow-slate-500 transition-all duration-500">
           Details
         </button>
       </Link>
