@@ -80,7 +80,7 @@ const Home = () => {
         </form>
       </div>
       {errorMessage && (
-        <div className="text-center text-lg">{errorMessage}</div>
+        <div className="text-center text-lg text-white">{errorMessage}</div>
       )}
       <div className="mt-5 w-1/3 mx-auto">
         {searchResults?.map((country) => (
