@@ -6,6 +6,8 @@ import { Link, useLocation, useParams } from "react-router-dom";
 const Home = () => {
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState();
+  const [errorMessage, setErrorMessage] = useState("");
+
   const location = useLocation();
   const { name } = useParams();
 
@@ -23,11 +25,20 @@ const Home = () => {
       const response = await fetch(
         `https://restcountries.com/v3.1/name/${query}`
       );
+      if (!response.ok) {
+        throw new Error("Error occurred while fetching search results");
+      }
       const data = await response.json();
-      setSearchResults(data);
-      // Process the search results data or update your application state accordingly
+      if (data.length === 0) {
+        setErrorMessage("No results found.");
+      } else {
+        setErrorMessage("");
+        setSearchResults(data);
+        // Process the search results data or update your application state accordingly
+      }
     } catch (error) {
       console.error("Error fetching search results:", error);
+      setErrorMessage("An error occurred while fetching search results.");
     }
   };
   // console.log(searchResults);
@@ -68,7 +79,9 @@ const Home = () => {
           </button>
         </form>
       </div>
-
+      {errorMessage && (
+        <div className="text-center text-lg">{errorMessage}</div>
+      )}
       <div className="mt-5 w-1/3 mx-auto">
         {searchResults?.map((country) => (
           <Country
