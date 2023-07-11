@@ -16,6 +16,7 @@ const CountryDetail = () => {
           <h4 className="text-xl mb-3">
             Official Name : {details[0]?.name.official}
           </h4>
+          <p className="font-semibold">Status : {details[0]?.status}</p>
           <p className="text-lg">Capital City : {details[0]?.capital}</p>
           <p className="text-lg">Population : {details[0]?.population}</p>
           <p className="text-lg">Region : {details[0]?.region}</p>
