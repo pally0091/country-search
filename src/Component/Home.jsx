@@ -38,7 +38,7 @@ const Home = () => {
       }
     } catch (error) {
       console.error("Error fetching search results:", error);
-      setErrorMessage("An error occurred while fetching search results.");
+      setErrorMessage("Nothing found on search results.");
     }
   };
   // console.log(searchResults);
